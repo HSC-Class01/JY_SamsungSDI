@@ -1,0 +1,18 @@
+삼성SDI OpenDART Agent API Key 설정
+
+1. https://opendart.fss.or.kr/ 에서 OpenDART 인증키를 발급합니다.
+2. GitHub 저장소:
+   https://github.com/HSC-Class01/JY_SamsungSDI
+3. Settings -> Secrets and variables -> Actions -> New repository secret
+4. Name: DART_API_KEY
+5. Secret: 발급받은 인증키
+6. Settings -> Pages -> Build and deployment -> Source -> GitHub Actions
+7. Actions -> Update OpenDART data and deploy dashboard -> Run workflow
+
+중요:
+- API Key를 README, Python 코드, ZIP 파일에 직접 입력하지 마세요.
+- .env는 로컬 테스트 전용이며 ZIP에는 포함하지 않습니다.
+- GitHub Actions에서는 secrets.DART_API_KEY를 사용합니다.
+
+OpenDART API:
+https://opendart.fss.or.kr/
